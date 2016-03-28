@@ -11,6 +11,7 @@ env:
 
   matrix:
     - M1=ONE
+    - M2=TWO
 
 build:
   
@@ -35,39 +36,4 @@ build:
     - echo "build success"
   on_failure:
     - echo "build failed"
-  
-integrations:
-  
-  notifications:
-    - integrationName: email
-      type: email
-      recipients: 
-        - shiphitchcock2@gmail.com
-      #  - vidya@shippable.com
-      
-      on_pull_request: always
-      on_start: always
-      on_success: always
-      on_failure: always
 
-    - integrationName: ship-slack
-      type: slack
-      recipients: 
-        - "#hitchcock1-public"
-        - pvt-channel
-      
-      on_start: always
-      on_pull_request: always
-      on_success: always
-      on_failure: always
- 
-    - integrationName: irc
-      type: irc
-      recipients: 
-        - "chat.freenode.net#test-cock"
-        - "chat.freenode.net#hitchcok2-irc"
-      
-      on_start: always
-      on_pull_request: always
-      on_success: always
-      on_failure: always
