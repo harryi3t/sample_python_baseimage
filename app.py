@@ -2,8 +2,8 @@ class App():
     def __init__(self):
         self.var1 = 15
 
-    def calculate(self):
-        self.result = self.var1 * 4 + 2
+    def calculate(self, a, b):
+        return a+b;
 
     def retrieve(self):
         return self.result
