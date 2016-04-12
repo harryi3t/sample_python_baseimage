@@ -1,14 +1,18 @@
 language: python
 #build_image: shippableimages/ubuntu1204_python
 
+matrix:
+  FOO=BAR
+  FOO1=BAR1
+
 python:
   - 3.3
 addons:
   postgresql: "9.3"
-  
+
 services:
-  - cassandratr
-  
+  - cassandra
+
 install:
   - pip install -r requirements.txt
 
@@ -21,4 +25,3 @@ script:
   - which python
   - coverage run `which nosetests` test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
   - coverage xml -o shippable/codecoverage/coverage.xml
-   
