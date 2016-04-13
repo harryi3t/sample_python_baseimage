@@ -1,9 +1,12 @@
 language: python
 python:
   - "3.3"
-# command to install dependencies
+env:
+  matrix:
+    - run=none         # gives 31%
+    - run=all          # gives 99%
 install: "pip install -r requirements.txt"
-# command to run tests
+
 script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
