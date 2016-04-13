@@ -1,0 +1,12 @@
+language: python
+python:
+  - "3.3"
+# command to install dependencies
+install: "pip install -r requirements.txt"
+# command to run tests
+script:
+  - mkdir -p shippable/testresults
+  - mkdir -p shippable/codecoverage
+  - which python
+  - coverage run `which nosetests` test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
+  - coverage xml -o shippable/codecoverage/coverage.xml
