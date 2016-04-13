@@ -3,8 +3,10 @@ language: python
 
 env:
   matrix:
-    - run=none
-    - run=all
+    - run=none         # gives 31%
+    - run=app1         # gives 65%
+    - run=app2         # gives 65%
+    - run=all          # gives 99%
 
 python:
   - 3.3

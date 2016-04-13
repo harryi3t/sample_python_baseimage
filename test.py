@@ -1,17 +1,50 @@
 import unittest
 import os
-from app import App
+from file1 import App1
+from file2 import App2
 
 class TestSuite(unittest.TestCase):
-    def test(self):
-        app = App()
-        if os.environ.get("run") == "all":
-            self.failIf(app.multiply(2,3) != 6)
-            self.failIf(app.sum(1,1) != 2)
-            self.failIf(app.diff(1,1) != 0)
-            self.failIf(app.divide(1,1) != 1)
-        else:
-            self.failIf(app.sum(1,1) != 2)
+    def testSum1(self):
+        app = App1()
+        run = os.environ.get("run")
+        if run == "app1" or run == "all" :
+            self.failIf(app.sum(10,2) != 12)
+    def testDiff1(self):
+        app = App1()
+        run = os.environ.get("run")
+        if run == "app1" or run == "all" :
+            self.failIf(app.diff(10,2) != 8)
+    def testMultiply1(self):
+        app = App1()
+        run = os.environ.get("run")
+        if run == "app1" or run == "all" :
+            self.failIf(app.multiply(10,2) != 20)
+    def testDivide1(self):
+        app = App1()
+        run = os.environ.get("run")
+        if run == "app1" or run == "all" :
+            self.failIf(app.divide(10,2) != 5)
+
+    def testSum2(self):
+        app = App2()
+        run = os.environ.get("run")
+        if run == "app2" or run == "all" :
+            self.failIf(app.sum(10,2) != 12)
+    def testDiff2(self):
+        app = App2()
+        run = os.environ.get("run")
+        if run == "app2" or run == "all" :
+            self.failIf(app.diff(10,2) != 8)
+    def testMultiply2(self):
+        app = App2()
+        run = os.environ.get("run")
+        if run == "app2" or run == "all" :
+            self.failIf(app.multiply(10,2) != 20)
+    def testDivide2(self):
+        app = App2()
+        run = os.environ.get("run")
+        if run == "app2" or run == "all" :
+            self.failIf(app.divide(10,2) != 5)
 
 def main():
     unittest.main()
