@@ -1,9 +1,10 @@
 language: python
 #build_image: shippableimages/ubuntu1204_python
 
-matrix:
-  FOO=BAR
-  FOO1=BAR1
+env:
+  matrix:
+    - run=none
+    - run=all
 
 python:
   - 3.3

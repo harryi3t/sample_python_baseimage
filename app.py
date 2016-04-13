@@ -1,14 +1,31 @@
+import os
 class App():
-    def __init__(self):
-        self.var1 = 15
-
-    def calculate(self, a, b):
+    def sum(self, a, b):
+        x = 1;
+        x = 1;
+        x = 1;
+        x = 1;
+        x = 1;
+        x = 1;
         return a+b;
 
-    def retrieve(self):
-        return self.result
+    def multiply(self, a ,b):
+        x = 1;
+        x = 1;
+        x = 1;
+        x = 1;
+        x = 1;
+        x = 1;
+        return a*b;
 
-if __name__ == "__main__":
-    app = App()
-    app.calculate()
-    print(app.retrieve)
+    def diff(self, a ,b):
+        x = 1;
+        x = 1;
+        x = 1;
+        x = 1;
+        x = 1;
+        x = 1;
+        return a-b;
+
+    def divide(self, a ,b):
+        return a/b;
