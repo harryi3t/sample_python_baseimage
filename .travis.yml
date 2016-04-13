@@ -5,7 +5,9 @@ env:
   matrix:
     - run=none         # gives 31%
     - run=all          # gives 99%
-install: "pip install -r requirements.txt"
+install:
+  - "pip install -r requirements.txt"
+  - pip install coveralls
 
 script:
   - mkdir -p shippable/testresults
@@ -13,3 +15,6 @@ script:
   - which python
   - coverage run `which nosetests` test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
   - coverage xml -o shippable/codecoverage/coverage.xml
+
+after_success:
+  coveralls
