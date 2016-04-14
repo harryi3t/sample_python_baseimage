@@ -26,3 +26,16 @@ script:
   - which python
   - coverage run `which nosetests` test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
   - coverage xml -o shippable/codecoverage/coverage.xml
+
+
+integrations:
+  notifications:
+    - integrationName: slack-test
+      type: slack
+      recipients:
+        - '#coverage-test'
+
+      on_start: always
+      on_pull_request: always
+      on_success: always
+      on_failure: always
