@@ -58,3 +58,13 @@ integrations:
       on_pull_request: always
       on_success: always
       on_failure: always
+    - integrationName: email
+      type: email
+      recipients:
+        - email-test@mailinator.com
+        - harendra@shippable.com
+
+      on_pull_request: always
+      on_start: always
+      on_success: always
+      on_failure: always
