@@ -49,3 +49,12 @@ integrations:
       on_pull_request: always
       on_success: always
       on_failure: always
+    - integrationName: irc
+      type: irc
+      recipients:
+        - "chat.freenode.net#coverage-test"
+
+      on_start: always
+      on_pull_request: always
+      on_success: always
+      on_failure: always
