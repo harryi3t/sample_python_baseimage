@@ -39,3 +39,13 @@ integrations:
       on_pull_request: always
       on_success: always
       on_failure: always
+    - integrationName: hipchat-test
+      type: hipchat
+      recipients:
+        - '#coverage-test'
+        - 'coverage-test'
+
+      on_start: always
+      on_pull_request: always
+      on_success: always
+      on_failure: always
