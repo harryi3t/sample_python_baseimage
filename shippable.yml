@@ -27,7 +27,6 @@ script:
   - coverage run `which nosetests` test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
   - coverage xml -o shippable/codecoverage/coverage.xml
 
-
 integrations:
   notifications:
     - integrationName: slack-test
@@ -62,7 +61,6 @@ integrations:
       type: email
       recipients:
         - email-test@mailinator.com
-        - harendra@shippable.com
 
       on_pull_request: always
       on_start: always
