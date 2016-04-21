@@ -4,47 +4,36 @@ from file1 import App1
 from file2 import App2
 
 class TestSuite(unittest.TestCase):
-    def testSum1(self):
-        app = App1()
-        run = os.environ.get("run")
-        if run == "app1" or run == "all" :
-            self.failIf(app.sum(10,2) != 12)
-    def testDiff1(self):
-        app = App1()
-        run = os.environ.get("run")
-        if run == "app1" or run == "all" :
-            self.failIf(app.diff(10,2) != 8)
-    def testMultiply1(self):
-        app = App1()
-        run = os.environ.get("run")
-        if run == "app1" or run == "all" :
-            self.failIf(app.multiply(10,2) != 20)
-    def testDivide1(self):
-        app = App1()
-        run = os.environ.get("run")
-        if run == "app1" or run == "all" :
-            self.failIf(app.divide(10,2) != 5)
-
-    def testSum2(self):
-        app = App2()
-        run = os.environ.get("run")
-        if run == "app2" or run == "all" :
-            self.failIf(app.sum(10,2) != 12)
-    def testDiff2(self):
-        app = App2()
-        run = os.environ.get("run")
-        if run == "app2" or run == "all" :
-            self.failIf(app.diff(10,2) != 8)
-    def testMultiply2(self):
-        app = App2()
-        run = os.environ.get("run")
-        if run == "app2" or run == "all" :
-            self.failIf(app.multiply(10,2) != 20)
-    def testDivide2(self):
-        app = App2()
-        run = os.environ.get("run")
-        if run == "app2" or run == "all" :
-            self.failIf(app.divide(10,2) != 5)
+	def test1(self):
+	   app = App()
+	   self.failIf(app.calculate(0,0) != 1)
+	def test2(self):
+	   app = App()
+	   self.failIf(app.calculate(0,0) != 1)
+	def test3(self):
+	   app = App()
+	   self.failIf(app.calculate(0,0) != 1)
+	def test4(self):
+	   app = App()
+	   self.failIf(app.calculate(0,0) != 1)
+	def test5(self):
+	   app = App()
+	   self.failIf(app.calculate(0,0) != 1)
+	def test6(self):
+	   app = App()
+	   self.failIf(app.calculate(0,0) != 1)
+	def test7(self):
+	   app = App()
+	   self.failIf(app.calculate(0,0) != 1)
+	def test8(self):
+	   app = App()
+	   self.failIf(app.calculate(0,0) != 1)
+	def test9(self):
+	   app = App()
+	   self.failIf(app.calculate(0,0) != 1)
+	def test10(self):
+	   app = App()
+	   self.failIf(app.calculate(0,0) != 1)
 
 def main():
     unittest.main()
